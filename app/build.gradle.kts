@@ -10,6 +10,10 @@ android {
         version = release(36)
     }
 
+    tasks.withType<Test>{
+        useJUnitPlatform()
+    }
+
     defaultConfig {
         applicationId = "com.example.listycity"
         minSdk = 24
@@ -36,7 +40,7 @@ android {
 }
 
 dependencies {
-    implementation(files("C:/Users/Admin/AppData/Local/Android/Sdk/platforms/android-36/android.jar"))
+//    implementation(files("C:/Users/Admin/AppData/Local/Android/Sdk/platforms/android-36/android.jar"))
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -44,6 +48,7 @@ dependencies {
     testImplementation(libs.junit)
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.0.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.0.1")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.10.2")
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
