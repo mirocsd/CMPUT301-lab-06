@@ -57,4 +57,15 @@ public class CityList {
             throw new IllegalArgumentException("List does not contain the given city!");
         }
     }
+    
+    /**
+     * Gets the number of cities in the list
+     *
+     * @return
+     *    The number of cities in the list
+     */
+    public void countCities() {
+        return cities.length();
+    }
 }
+
