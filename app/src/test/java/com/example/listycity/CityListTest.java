@@ -59,4 +59,13 @@ public class CityListTest {
             cityList.deleteCity(new City("Vancouver", "British Columbia"));
         });
     }
+
+    @Test
+    void testCountCities() {
+        CityList cityList = mockCityList();
+        assertEquals(1, cityList.countCities());
+        cityList.add(new City("Vancouver", "British Columbia"));
+        assertEquals(2, cityList.countCities());
+    }
 }
+
